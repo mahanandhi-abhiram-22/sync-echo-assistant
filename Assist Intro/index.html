@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Echo Synchronized Voice Assistant</title>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,500;0,600;0,700;1,400&family=Dancing+Script:wght@500&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<style>
+        *{
+      box-sizing: border-box;
+    padding: 0;
+        margin: 0;
+    }
+    body{
+        overflow-x: hidden;
+        background-color: blanchedalmond;
+    }
+    h1{
+        font-family: 'Dancing Script', cursive;
+    }
+    .carousel-item img{
+        width: 100%;
+        height: 80vh;
+    
+    }
+    .card-body img{
+        max-width: 50%;
+        max-height:200px ;
+    }
+    #image1{
+        height: 50px;
+    }
+    .equal-height-card {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    .custom-img {
+        border: none;
+        background: none;
+        width: auto;
+        height: 250px;
+        padding-right: 130px;
+    }
+    .glassy-navbar {
+    height: 70px;
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-nav .nav-link {
+    transition: 0.3s ease-in-out;
+}
+
+.navbar-nav .nav-link:hover {
+    background: linear-gradient(90deg, rgba(6, 136, 223, 0.7), rgba(27, 8, 201, 0.7));
+    border-radius: 5px;
+    color: white !important;
+}
+        
+</style>
+
+<body>
+
+    <header id="home">
+        <nav class="navbar navbar-expand-lg navbar-light bg-transparent px-4 border-bottom fixed-top glassy-navbar">
+            <div class="container-fluid">
+                <a class="navbar-brand fs-6" href="#">
+                    <img src="image/logos.png" alt="logo" style="height: 60px; width: auto;">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0 fs-4 text-center">
+                        <li class="nav-item">
+                            <a class="nav-link active text-primary" aria-current="page" href="#home">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#about">About</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                Services
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item" href="#Services">#Services & Other</a></li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li><a class="dropdown-item" href="#Services">Web Designer</a></li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li><a class="dropdown-item" href="#Services">Graphic Designer</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#team">Our Team</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#contact">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        
+        <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+                    aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+                    aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+                    aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="image/voice2.webp" class="d-block w-100" alt="...">
+                    <div class="carousel-caption  d-md-block">
+                        <h5>Voice Command</h5>
+                        <p>Voice prompts involve using spoken language to interact with a system, leveraging technologies like speech recognition and natural language processing. This method is becoming increasingly popular with the rise of virtual assistants like Siri, Alexa, and Google Assistant. Voice prompts offer convenience and hands-free operation, which is particularly useful for individuals with physical disabilities or in situations where typing is impractical, such as driving. They can also provide a more natural and intuitive user experience. However, voice recognition technology is not always accurate, especially in noisy environments or with users who have strong accents or speech impediments. Additionally, privacy concerns may arise with the continuous listening capabilities of voice-activated systems.</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="https://geekflare.com/wp-content/uploads/2023/04/Good-Prompt-1-1-1500x596.png" class="d-block w-100" alt="...">
+                    <div class="carousel-caption  d-md-block">
+                        <h5>Text Command</h5>
+                        <p>A text prompt is an input method used in various applications where users are required to type in text to interact with a system. This method is prevalent in search engines, chatbots, and command-line interfaces. The advantages of text prompts include precision, as users can clearly specify their queries or commands, and flexibility, allowing for detailed and complex instructions. Moreover, text prompts are accessible to those with hearing impairments and can be utilized in noisy environments where voice commands might be impractical. However, text input can be slower and more cumbersome for users who are not proficient typists or for those using mobile devices with small on-screen keyboards..</p>
+                    </div>
+                </div>
+
+                <div class="carousel-item">
+                    <img src="image/middle.jpg" class="d-block w-100" style="width: 150px;" alt="...">
+                    <div class="carousel-caption d-md-block">
+                        <h5>Eco Friendly Interface </h5>
+                        <p>An eco-friendly interface is designed with sustainability in mind, aiming to reduce the environmental impact of electronic devices and their usage. It may also include the use of eco-friendly materials in the construction of hardware and the promotion of practices that minimize electronic waste, such as modular designs that facilitate repairs and upgrades. In software, dark mode interfaces can reduce the power usage of OLED screens. Moreover, promoting digital minimalism—encouraging users to reduce unnecessary digital activities—can further decrease energy consumption. The goal of an eco-friendly interface is to create a more sustainable technology ecosystem that supports environmental conservation efforts while maintaining usability and functionality for the end-user.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </header>
+    <section class="about my-5" id="about">
+        <div class="container ">
+            <div class="text-center my-5">
+                <h1 data-aos="fade-up data-aos-offset='200'" class=" text-center">About <span
+                        class="text-primary">Synchronized Echo Assistant</span> </h1>
+                <hr  class="w-25 m-auto">
+            </div>
+            <div class="row">
+                <div class="col-sm-12 col-md-6 col-lg-6 col-12 " data-aos="zoom-in" data-aos-offset='200'>
+                    <h1>What do you <span class="text-primary"> want to know?</span></h1>
+                    <p class="p-2">An echo synchronized assistant can significantly enhance various aspects of daily life by 
+                        automating tasks and improving convenience. In home automation, it can control lighting and temperature with 
+                        simple voice commands, such as turning on lights or setting the thermostat, and adjust settings based on your
+                         presence or time of day. For personal productivity, it manages your schedule and reminders, adding events to
+                          your calendar and sending reminders for tasks like calling someone. Entertainment becomes more seamless with
+                           voice-controlled music playback and media streaming, allowing for easy control over smart devices and 
+                           synchronized music across multiple rooms. In terms of security, the assistant can monitor and alert you 
+                           about home security, providing updates on door locks and camera feeds. Shopping is simplified with 
+                           voice-assisted grocery lists and online orders, making it easy to add items to your list or reorder 
+                           essentials. Communication is also enhanced, enabling hands-free voice calls and messaging 
+                           with your contacts. Integrating an echo synchronized assistant into these areas makes for a more
+                            connected, efficient, and convenient lifestyle.</p>
+                            <a href="https://chatgpt.com/c/133f58d8-1433-46e6-a9a1-27ff517d7063" class="btn btn-primary mb-5">
+                                Get started.!
+                            </a>
+                            
+                    <div class="accordion" id="accordionExample" data-aos="zoom-in-left" data-aos-offset='200'>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingOne">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                    Echo Synchronized Assistant </button>
+                            </h2>
+                            <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
+                                data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+                                   <ul >
+                                    <li>It can works on wide range of data.</li>
+                                    <li>Implemented voice and text using NLP for more efficiency</li>
+                                   </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingTwo">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                    Built Upon </button>
+                            </h2>
+                            <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+                                data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+                                   <ul>
+                                    <li>HTML</li>
+                                    <li>CSS</li>
+                                    <li>PYTHON</li>
+                                    <li>JAVASCRIPT</li>
+                                   </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingThree">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                    Future Implementations </button>
+                            </h2>
+                            <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
+                                data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+                                    <ul>
+                                        <li>we'll think about it.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="col-sm-12 col-md-6 col-lg-6 col-12 m-auto text-end" data-aos="fade-right" data-aos-offset='200'>
+    <div class="image1">
+        <img src="image/poster.png" class="img-fluid custom-img" alt="Assistant" style="height: 400px; padding-right: 18px;">
+    </div>
+</div>
+
+            </div>
+        </div>
+    </section>
+    <section class="Services py-5 text-light" id="Services" style="background-color: whitesmoke;">
+        <div class="container">
+            <div class="text-center my-5">
+                <h1 class="text-center">
+                    <span style="color: black;">Our</span> <span class="text-primary">Developers</span>
+                </h1>
+                <hr class="w-25 m-auto">
+            </div>            
+            <div class="row" data-aos="zoom-in-up" data-aos-offset='200'>
+                <div class="col-sm-12 col-md-4 col-lg-4 col-12">
+                    <div class="card bg-primary text-white equal-height-card">
+                        <div class="card-body">
+                            <i class="fa fa-users bg-white p-2 text-dark rounded mb-2"></i>
+                            <h5 class="card-title">Web Development</h5>
+                            <p class="card-text">we are the Developers.</p>
+                            <a href="#" class="btn btn-primary">Know More About Us!</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-12 col-md-4 col-lg-4 col-12">
+                    <div class="card bg-primary text-white equal-height-card">
+                        <div class="card-body">
+                            <i class="fa fa-code bg-white p-2 text-dark rounded mb-2"></i>
+                            <h5 class="card-title">Assistant Development</h5>
+                            <p class="card-text">we are the Developers.</p>
+                            <a href="#" class="btn btn-primary">Know More About Us!</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-12 col-md-4 col-lg-4 col-12">
+                    <div class="card bg-primary text-white equal-height-card">
+                        <div class="card-body">
+                            <i class="fa fa-users bg-white p-2 text-dark rounded mb-2"></i>
+                            <h5 class="card-title">Graphic Designing</h5>
+                            <p class="card-text">we are the designers.</p>
+                            <a href="#" class="btn btn-primary">Know More About Us!</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="team my-5 text-center" id="team">
+        <div class="container">
+            <div class="text-center my-5">
+                <h1 class="text-center">Our <span class="text-primary">Team</span> </h1>
+                <hr  class="w-25 m-auto">
+            </div>
+            <div class="row">
+                <div class="col-sm-12 col-md-4 col-lg-4 col-12">
+                    <div class="card" data-aos="zoom-in-up" data-aos-offset='200'>
+                        <div class="card-body">
+                            <img src="#" class="img-fluid rounded-circle border border-primary p-2" alt="">
+                            <h5 class="card-title"> ARYAN MAMMALI</h5>
+                            <p class="card-text">Backend Developer</p>
+                            <a href="#" class="btn btn-primary">More ABout Us</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-12 col-md-4 col-lg-4 col-12">
+                    <div class="card" data-aos="zoom-in-down" data-aos-offset='200'>
+                        <div class="card-body">
+                            <img src="#" class="img-fluid rounded-circle border border-primary p-2" alt="">
+
+                            <h5 class="card-title">ABHIRAM MAHANANDHI</h5>
+                            <p class="card-text">Frontend Developer</p>
+                            <a href="#" class="btn btn-primary">More ABout Us</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-sm-12 col-md-4 col-lg-4 col-12">
+                    <div class="card" data-aos="zoom-in-left" data-aos-offset='200'>
+                        <div class="card-body">
+                            <img src="#" class="img-fluid rounded-circle border border-primary p-2" alt="">
+
+                            <h5 class="card-title">MAAZ TALHA </h5>
+                            <p class="card-text">Digital</p>
+                            <a href="#" class="btn btn-primary">More ABout Us</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="d-flex justify-content-center align-items-center" style="height: 100vh; padding-top: 5px;">
+                    <div class="col-sm-12 col-md-4 col-lg-4 col-12">
+                        <div class="card" data-aos="zoom-in-down" data-aos-offset='200'>
+                            <div class="card-body text-center">
+                                <img src="#" class="img-fluid rounded-circle border border-primary p-2" alt="">
+                                <h5 class="card-title">HARSHINI</h5>
+                                <p class="card-text">Researcher</p>
+                                <a href="#" class="btn btn-primary">More About Us</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                
+            </div>
+        </div>
+    </section>
+    <section class="contact py-5" id="contact">
+        <div class="container">
+            <div class="text-center my-5">
+                <h1 class="text-center">Feel free <span class="text-primary">to contact</span> </h1>
+                <hr  class="w-25 m-auto">
+            </div>
+            <div class="row">
+                <div class="col-sm-12 col-md-6 col-lg-6 col-12" data-aos="zoom-in-left">
+                    <form class="row g-3">
+                        <div class="col-md-6">
+                            <label for="inputEmail4" class="form-label">Email</label>
+                            <input type="email" class="form-control" id="inputEmail4">
+                        </div>
+                        <div class="col-md-6">
+                            <label for="inputPassword4" class="form-label">Password</label>
+                            <input type="password" class="form-control" id="inputPassword4">
+                        </div>
+                        <div class="col-12">
+                            <label for="inputAddress" class="form-label">Address</label>
+                            <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
+                        </div>
+
+                        <div class="col-md-6">
+                            <label for="inputCity" class="form-label">City</label>
+                            <input type="text" class="form-control" id="inputCity">
+                        </div>
+                        <div class="col-md-4">
+                            <label for="inputState" class="form-label">State</label>
+                            <select id="inputState" class="form-select">
+                                <option selected>Choose...</option>
+                                <option>...</option>
+                            </select>
+                        </div>
+                        <div class="col-md-2">
+                            <label for="inputZip" class="form-label">Zip</label>
+                            <input type="text" class="form-control" id="inputZip">
+                        </div>
+                        <div class="col-12">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="gridCheck">
+                                <label class="form-check-label" for="gridCheck">
+                                    Check me out
+                                </label>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <button type="submit" class="btn btn-primary">Sign in</button>
+                        </div>
+                    </form>
+                </div>
+                <div class="col-sm-12 col-md-6 col-lg-6 col-12 m-auto text-end p-4" data-aos="zoom-in-right">
+                    <img src="image/last.png" class="img-fluid img-thumbnail p-2" alt="">
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="container-fluid bg-primary text-white p-2 text-center fs-4"> The Developers Are Aryan , ABhiram , Maaz , Harshini</div>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+        integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+        integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
+        crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+</body>
+
+</html>
